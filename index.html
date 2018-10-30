@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Actor Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+    <header id="scrolltop">
+        <div class="sidenav">
+            <ul class="social">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="scrollnav">
+            <ul>
+                <li><a href="#about">Bio</a></li>
+                <li><a href="#showreel">Video</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="uparrow">
+            <a href="#scrolltop">
+                <img src="images/up-scroll-arrow.svg" alt="scroll-up">
+            </a>
+        </div>
+
+        <div class="headerintro">
+            <div class="headertext">
+                    <nav>
+                        <h3>Daniel Martinez</h3>
+                        <ul>
+                            <li><a href="#about">Bio</a></li>
+                            <li><a href="#showreel">Video</a></li>
+                            <li><a href="#photos">Photos</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                <div class="textwrap">
+                    <h1><span class="typedtext"></span></h1>
+                        <div class="textrise">
+                            <h1>Daniel <br> Martinez</h1>
+                            <br>
+                            <p>
+                                <span>Actor /</span>
+                                <span>Performer /</span>
+                                <span>Model</span>
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <div class="headerimg">
+                <div class="imghere"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h1>About Me</h1>
+            <br>
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+            <br>
+            <p>This is a great space to write a long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
+            <br>
+            <a class="btn" onclick="resume()">View Full Resume</a>
+        </div>
+    </section>
+
+    <section class="resume">
+        <div class="resumecontainer">
+            <div class="title">
+                <h2>Resume</h2>
+                <img src="images/cross-out.svg" alt="exit" class="exit" onclick="exitResume()">
+            </div>
+
+            <div class="lifedescription">
+                <div class="lifeleft">
+                    <p>Born: 1985</p>
+                    <p>Height: 5"11</p>
+                    <p>Eye Color: Brown</p>
+                    <p>Hair Color: Brown</p>
+                    <p>Languages: English, German</p>
+                </div>
+                <div class="liferight">
+                    <a href="resume.pdf" target="_blank" download><i class="fas fa-file"></i></a>         
+                    <a href="resume.pdf" target="_blank" download>Download Resume</a>
+                </div>
+            </div>
+
+            <div class="experience">
+                <div class="skills">
+                    <h4>Special Skills</h4>
+                    <p>Physical Comedy</p>
+                    <p>Singing</p>
+                    <p>Swimming</p>
+                    <p>Football</p>
+                </div>
+                <div class="theater">
+                    <h4>Theater</h4>
+                    <p>2023, Play / Director / Theater / Role</p>
+                    <p>2023, Play / Director / Theater / Role</p>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="film">
+                    <h4>Film</h4>
+                    <p>2023, Title / Director / Role</p>
+                    <p>2023, Title / Director / Role</p>
+                    <p>2023, Title / Director / Role</p>
+                </div>
+                <div class="education">
+                    <h4>Education & Training</h4>
+                    <p>Institution / Workshop Name / Instructor</p>
+                    <p>Institution / Workshop Name / Instructor</p>
+                    <p>Institution / Workshop Name / Instructor</p>
+                </div>
+            </div>
+            <div class="experience bot">
+                <div class="tv">
+                    <h4>TV</h4>
+                    <p>2023, Title / Director / Production House / Role</p>
+                    <p>2023, Title / Director / Production House / Role</p>
+                </div>
+                <div class="awards">
+                    <h4>Awards</h4>
+                    <p>2023 / Description</p>
+                    <p>2023 / Description</p>
+                    <p>2023 / Description</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="showreel" id="showreel">
+        <h1>Showreel</h1>
+            <div class="showreelimg" onclick="toggleVideo()">
+                <div class="showreelcont">
+                    <div class="playvideo">
+                        <i class="far fa-play-circle"></i>
+                        <p>Play Video</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <section class="displayvideo">
+        <div class="exitcont" onclick="toggleVideo()">
+            <img src="images/cross-out.svg" class="exitvideo">
+        </div>
+
+        <div class="videocont">
+            <video src="video.mp4" autoplay controls></video>
+
+            <div class="videoinfo">
+                <h2>Showreel</h2>
+                <a>
+                    <i class="fas fa-share-alt"></i>
+                    <p>share</p>                       
+                </a>
+                <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+                <div class="addthis_inline_share_toolbox social"></div>  
+                <p class="vidtime">00:07</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="photos" id="photos">
+        <h1>Photos</h1>
+        <div class="photocont">
+            <div class="row1">
+                <div class="photoone photohighlight">
+                    <div class="highlight"></div>
+                </div>
+                <div class="phototwo photohighlight">
+                    <div class="highlight"></div>
+                </div>
+                <div class="photothree photohighlight">
+                    <div class="highlight"></div>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="photofour photohighlight">
+                    <div class="highlight"></div>
+                </div>
+                <div class="photofive photohighlight">
+                    <div class="highlight"></div>
+                </div>
+                <div class="photosix photohighlight">
+                    <div class="highlight"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <div class="contactflex">
+            <div class="contactimg"></div>
+            <div class="contactinfo">
+                <div class="contactcont">
+                    <h1>Contact</h1>
+                    <br>
+                    <br>
+                    <h3>Representation</h3>
+                    <br>
+
+                    <h4>Manager</h4>
+                    <p>Bruce Robertson</p>
+                    <p>Email - info@mysite.com</p>
+                    <p>Tel - 123-456-7890</p>
+                    <br>
+
+                    <h4>Commercial Agent</h4>
+                    <p>Magnum - Steven Macfee</p>
+                    <p>Email - info@mysite.com</p>
+                    <p>Tel - 123-456-7890</p>
+
+                    <br>
+
+                    <h4>SF Agent</h4>
+                    <p>Pinnacle - Nathan Kelly</p>
+                    <p>Email - blah@email.com</p>
+                    <p>Tel - 111-222-3333</p>
+                    <br>
+                    <div class="contacticons">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy 3000 by Ralph Gator</p>
+    </footer>
+
+    <script src="js.js"></script>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bd4d955aa4aa381"></script>
+
+</body>
+</html>
