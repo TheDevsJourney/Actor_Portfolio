@@ -14,7 +14,8 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: #f0d850;
-    padding: .8% .9%;
+    /* padding: .8% .9%; */
+    padding: .8rem .7rem;
     min-height: 15%;
     display: flex;
     flex-direction: column;
@@ -63,7 +64,8 @@
 
 .scrollnav ul li{
     margin-right: 5%;
-    padding: 1.3% 0;
+    /* padding: 1.3% 0; */
+    padding: 25px 0;
 }
 
 .scrollnav ul li a{
@@ -110,7 +112,6 @@
     right: 0;
     left: 0;
     padding: 50px;
-    
 }
 
 header nav h3{
@@ -138,7 +139,7 @@ header nav li a:hover{
 }
 
 .headertext{
-    height: 100vh;
+    min-height: 100vh;
     width: 50vw;
     background-color: #2d7594;
     display: flex;
@@ -149,6 +150,9 @@ header nav li a:hover{
 
 .textwrap{
     text-align: left;
+    padding: 60px 5px;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .textrise{
@@ -189,7 +193,7 @@ header nav li a:hover{
 }
 
 .headerimg{
-    height: 100vh;
+    min-height: 100vh;
     width: 50vw;
 }
 
@@ -267,11 +271,12 @@ header nav li a:hover{
     top: 0;
     left: 0;
     background-color: gray;
-    transform: translateX(-50vw);
-    transition: .9s ease-in;
+    transform: translateX(-100vw);
+    transition: .8s ease-in .2s;
     background-color: #2d7594;
     overflow: scroll;
     z-index: 120;
+    opacity: 0;
 }
 
 .resume {
@@ -287,6 +292,7 @@ header nav li a:hover{
 
 .resumetog{
     transform: translateX(0vw);
+    opacity: 1;
 }
 
 .resumecontainer{
@@ -667,11 +673,11 @@ header nav li a:hover{
 .contactcont{
     width: 60%;
     margin: 0 auto;
-    padding: 3% 0;
+    padding: 3% .5%;
 }
 
 .contactinfo h1{
-    font-size: 4.4rem;
+    font-size: 4.2rem;
     font-weight: 900;
     color: #f0d850;  
 }
@@ -700,7 +706,7 @@ header nav li a:hover{
 
 .contacticons ul li{
     list-style-type: none;
-    display: flex;
+    /* display: flex; */
     margin-right: 5%;
 }
 
@@ -719,10 +725,168 @@ header nav li a:hover{
 
 footer{
     text-align: center;
-    padding: 1.4% 0;
+    /* padding: 1.4% 0; */
+    padding: 25px 0;
+    max-width: 100%;
 }
 
 footer p{
     font-size: .8rem;
     font-weight: 100;
 }
+
+
+
+/* Media queries */
+
+
+@media(max-width: 1024px){
+    .headertext h1{
+        font-size: 5.4rem;
+    }
+    
+    .headertext h1 span{
+        font-size: 2rem;
+    }
+
+    .textwrap{
+        width: 70%;
+    }
+
+    .about .container{
+        max-width: 65%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 5% 1%;
+        /* background-color: yellow; */
+    }
+
+    .resume{
+        width: 100vw;
+    }
+}
+
+@media(max-width: 880px){
+    .headerintro{
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    .headertext{
+        min-height: 60vh;
+        width: 100vw;
+    }
+
+    .headerimg{
+        min-height: 40vh;
+        width: 100vw;
+    }
+    
+    .imghere{
+        min-height: 40vh;
+        max-width: 100%;
+        background-position: center 5%;
+    }
+
+    .headertext h1{
+        font-size: 4.6rem;
+    }
+    
+    .headertext h1 span{
+        font-size: 1.8rem;
+    }
+
+    .textwrap{
+        text-align: left;
+        padding: 0px 10px;
+        width: 60%;
+    }
+
+    .headerintro nav{
+        padding: 25px;
+    }
+
+    header nav h3{
+        font-size: 1.4rem;
+    }
+
+    header nav li a{
+        font-size: .9rem;
+    }
+
+    .contactflex{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .contactimg{
+        min-height: 65vh;
+        width: 100vw;
+    }
+    
+    .contactinfo{
+        min-height: 70vh;
+        width: 100vw;
+        text-align: center;
+    }
+
+    .contacticons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .contacticons ul{
+        justify-content: center;
+    }
+
+    .contacticons ul li{
+        margin-right: 20%;
+    }
+
+    .videocont{
+        flex-direction: column;
+    }
+    
+    .videocont video{
+        width: 100%;
+        height: auto;
+    }
+    
+    .videoinfo{
+        display: flex;
+        flex-direction: column;
+        padding: 0 3%;
+        color: #f9f9f9;
+    }
+
+    .videoinfo h2{
+        margin: 10% 0 2% 0;
+    }
+    
+    .videoinfo a{
+        margin-bottom: 2%;
+    }  
+    
+    .photoone, .phototwo, .photothree, .photofour, .photofive, .photosix{
+        width: 90%;
+        margin: 2% 5%;
+    }
+
+    .photosix{
+        margin-bottom: 10%;
+    }   
+}
+
+@media(max-width: 450px){
+    .textwrap{
+        width: 85%;
+    }
+
+    .headertext h1{
+        font-size: 4rem;
+    }
+}
+

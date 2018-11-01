@@ -72,5 +72,3 @@ window.onscroll = function(){
         uparrow.classList.remove("uparrowshow");
     }
 }
-
-
