@@ -53,15 +53,18 @@ window.onscroll = function(){
     var header = document.querySelector(".headerintro");
     var links = document.querySelectorAll(".scrollnav ul li a");
     var uparrow = document.querySelector(".uparrow");
+    var mobileNav = document.querySelector(".mobileNav");
+    var mobileNavCont = document.querySelector(".mobileNavCont");
 
-    if(window.pageYOffset > header.scrollHeight){
+    // Check to see if window scroll is greater than the header height and the innerwidth is greater than 880. IF so, then the scroll navigation will appear. Intended to hide for Ipad / Mobile devices
+    if(window.pageYOffset > header.scrollHeight && window.innerWidth >= 880){
         scrollnav.classList.add("scrollnavshow");
         for(var i = 0; i < links.length; i++){
             links[i].setAttribute(
                 "style", "opacity: 1; transition: all 1s ease-in .3s; display: block"
             )
         }
-        uparrow.classList.add("uparrowshow");        
+        uparrow.classList.add("uparrowshow");
     }else{
         scrollnav.classList.remove("scrollnavshow");
         for(var i = 0; i < links.length; i++){
@@ -71,4 +74,34 @@ window.onscroll = function(){
         }
         uparrow.classList.remove("uparrowshow");
     }
+
+    // Add a drop shadow to the mobile navigation after it passes the header.
+    if(window.pageYOffset > header.scrollHeight - 500 && window.innerWidth <= 880){
+        mobileNav.setAttribute(
+            "style", "box-shadow: 2px 3px 18px rgb(36, 36, 36);"
+        )
+    }else{
+        mobileNav.removeAttribute(
+            "style", "box-shadow: 2px 3px 18px rgb(36, 36, 36);"
+        )
+    }
+}
+
+// changes hamburger menu into an X
+function menuChange(x) {
+    x.classList.toggle("change");
+};
+
+function mobileNav(){
+    var mobileNav = document.querySelector(".mobileNav");
+    mobileNav.classList.toggle("mobileNavTog");
+}
+
+
+// When a link is clicked in the mobile navigation the x is returned to a hamburger, and the background containing the links disappears.
+function mobNavClickedLink(){
+    var mobileNav = document.querySelector(".mobileNav");
+    mobileNav.classList.remove("mobileNavTog");
+    var change = document.querySelector(".change");
+    change.classList.remove("change");
 }
