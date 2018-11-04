@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
-<body>
+<body onresize="clearScrollNav()">
     <header id="scrolltop">
         <div class="sidenav">
             <ul class="social">
@@ -22,7 +22,7 @@
 
         <div class="scrollnav">
             <ul>
-                <li><a href="#about">Bio</a></li>
+                <li><a href="#about" onclick="forBio()">Bio</a></li>
                 <li><a href="#showreel">Video</a></li>
                 <li><a href="#photos">Photos</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -58,7 +58,7 @@
                 <nav>
                     <h3>Daniel Martinez</h3>
                     <ul>
-                        <li><a href="#about">Bio</a></li>
+                        <li><a href="#about" onclick="forBio()">Bio</a></li>
                         <li><a href="#showreel">Video</a></li>
                         <li><a href="#photos">Photos</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -84,7 +84,8 @@
         </div>
     </header>
 
-    <section class="about" id="about">
+    
+    <section class="about jumptarget" id="about">
         <div class="container">
             <h1>About Me</h1>
             <br>
@@ -162,7 +163,7 @@
     </section>
 
     
-    <section class="showreel" id="showreel">
+    <section class="showreel jumptarget" id="showreel">
         <h1>Showreel</h1>
             <div class="showreelimg" onclick="toggleVideo()">
                 <div class="showreelcont">
@@ -196,7 +197,7 @@
         </div>
     </section>
 
-    <section class="photos" id="photos">
+    <section class="photos jumptarget" id="photos">
         <h1>Photos</h1>
         <div class="photocont">
             <div class="row1">
@@ -225,7 +226,7 @@
     </section>
 
 
-    <section class="contact" id="contact">
+    <section class="contact jumptarget" id="contact">
         <div class="contactflex">
             <div class="contactimg"></div>
             <div class="contactinfo">

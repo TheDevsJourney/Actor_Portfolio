@@ -47,6 +47,56 @@ function toggleVideo(){
     displayvideo.classList.toggle("revealvid");
 }
 
+function forBio(){
+    var about = document.querySelector(".about");
+    about.classList.add("forBio");
+}
+
+
+// Makes sure the transition that is usually on the scroll navigation is not going on while resizing the screen.
+function clearScrollNav(){
+    var scrollnav = document.querySelector(".scrollnav");
+    var links = document.querySelectorAll(".scrollnav ul li a");
+    var header = document.querySelector(".headerintro");
+    var uparrow = document.querySelector(".uparrow");
+
+    if(window.innerWidth <= 880){
+        scrollnav.setAttribute(
+            "style", "transition: none"
+        )
+        scrollnav.classList.remove("scrollnavshow");
+    }else{
+        scrollnav.removeAttribute(
+            "style", "transition: none"
+        )     
+        scrollnav.classList.add("scrollnavshow");
+        for(var i = 0; i < links.length; i++){
+            links[i].setAttribute(
+                "style", "opacity: 1; transition: all 1s ease-in .3s; display: block"
+            )
+        } 
+    }
+
+    // Used to ensure that the scrollnav will not appear in the header when resizing the screen. 
+    if(window.pageYOffset > header.scrollHeight  && window.innerWidth >= 880){
+        scrollnav.classList.add("scrollnavshow");
+        for(var i = 0; i < links.length; i++){
+            links[i].setAttribute(
+                "style", "opacity: 1; transition: all 1s ease-in .3s; display: block"
+            )
+        }
+        uparrow.classList.add("uparrowshow");
+    }else{
+        scrollnav.classList.remove("scrollnavshow");
+        for(var i = 0; i < links.length; i++){
+            links[i].setAttribute(
+                "style", "opacity: 0;"
+            )
+        }
+        uparrow.classList.remove("uparrowshow");
+    }
+}
+
 
 window.onscroll = function(){
     var scrollnav = document.querySelector(".scrollnav");
@@ -54,10 +104,9 @@ window.onscroll = function(){
     var links = document.querySelectorAll(".scrollnav ul li a");
     var uparrow = document.querySelector(".uparrow");
     var mobileNav = document.querySelector(".mobileNav");
-    var mobileNavCont = document.querySelector(".mobileNavCont");
 
     // Check to see if window scroll is greater than the header height and the innerwidth is greater than 880. IF so, then the scroll navigation will appear. Intended to hide for Ipad / Mobile devices
-    if(window.pageYOffset > header.scrollHeight && window.innerWidth >= 880){
+    if(window.pageYOffset > header.scrollHeight  - 1 && window.innerWidth >= 880){
         scrollnav.classList.add("scrollnavshow");
         for(var i = 0; i < links.length; i++){
             links[i].setAttribute(

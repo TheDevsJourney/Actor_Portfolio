@@ -48,8 +48,10 @@
     position: fixed;
     width: 100%;
     z-index: 100;
-    transition: all .9s ease;
+    transition: all .5s ease;
     background-color: rgba(45, 117, 148, 0);
+    height: 65px;
+    line-height: 65px;
 }
 
 .scrollnavshow{
@@ -65,8 +67,8 @@
 }
 
 .scrollnav ul li{
-    /* padding: 1.3% 0; */
-    padding: 25px 40px;
+    /* padding: 25px 40px; */
+    padding: 0 40px;
 }
 
 .scrollnav ul li a{
@@ -214,11 +216,6 @@
     /* transform: rotate(45deg) translate(-9px, -10px); */
 }
 
-.changeBack{
-    -webkit-transform: rotate(0deg) translate(0px, 0px);
-    opacity: 1;
-}
-
 /* End of mobile navigation */
 
 
@@ -284,6 +281,10 @@ header nav li a:hover{
 	transition: .5s linear 1.6s; 
 }
 
+.textrise > p > span{
+    color: white;
+}
+
 .textrise > p > span:nth-child(1){
     transform: translateX(40vw);
     opacity: 0;
@@ -310,7 +311,7 @@ header nav li a:hover{
     font-size: 6rem;
 }
 
-.headertext h1 span{
+.headertext h1 .typedtext{
     color: #f0d850;
     font-size: 2.6rem;
 }
@@ -576,18 +577,19 @@ header nav li a:hover{
 }
 
 .exitcont{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
-    padding: 2% 0;
+    padding: 2% 40px;
     margin-bottom: 2rem;
-    cursor: pointer;
 }
 
 .exitvideo{
-    height: 1.4rem;
+    /* height: 1.4rem; */
+    height: 35px;
+    cursor: pointer;
 }
 
 .videocont{
@@ -856,9 +858,22 @@ footer p{
 
 
 
+.jumptarget:target::before {
+    content: "";
+    display: block;
+    height: 65px; 
+    margin: -65px 0 0; 
+}
+
+.forBio:target::before{
+    content: "";
+    display: block;
+    height: 0px; 
+    margin: 0px 0 0;
+}
+
+
 /* Media queries */
-
-
 @media(max-width: 1024px){
     .headertext h1{
         font-size: 5.4rem;
@@ -923,7 +938,8 @@ footer p{
 
     .textwrap{
         text-align: left;
-        padding: 20px 5px;
+        /* padding: 20px 5px; */
+        padding: 40px 5px;
         width: 60%;
     }
 
@@ -1024,28 +1040,41 @@ footer p{
     .sidenav{
         display: none;
     }
+    .jumptarget:target::before {
+        content: "";
+        display: block;
+        height: 65px; /* fixed header height*/
+        margin: -65px 0 0; /* negative fixed header height */
+    }
 }
 
 @media(max-width: 500px){
     .textwrap{
         width: 75%;
-        padding: 40px 5px;
+        /* padding: 40px 5px; */
+        padding: 55px 5px;
     }
 
     .headertext h1{
-        font-size: 4.2rem;
+        font-size: 4rem;
     }
 
     .headertext{
-        min-height: 60vh;
+        min-height: 65vh;
     }
 
     .mobileNav{
         min-height: 50vh;
-
     } 
     .mobileNav .mobileNavUL{
         min-height: 50vh;
     }
+
+    /* .jumptarget:target::before {
+        content: "";
+        display: block;
+        height: 65px; 
+        margin: -65px 0 0; 
+    } */
 }
 
