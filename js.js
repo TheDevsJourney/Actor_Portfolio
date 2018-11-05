@@ -29,12 +29,12 @@ window.onload = function(){
     timingSpan();
 };
 
+// Was having a weird bug where the inside container of resume(the text and all other content) would sometimes appear on load on the page when revisiting the site. Will try to see if this fixes it.
 function resume(){
     var resume = document.querySelector(".resume");
-    // resume.setAttribute(
-    //     "style", "transform: translateX(0vw);"
-    // )
     resume.classList.toggle("resumetog");
+    var resumecontainer = document.querySelector(".resumecontainer");
+    resumecontainer.style.display = "block";
 }
 
 function exitResume(){
